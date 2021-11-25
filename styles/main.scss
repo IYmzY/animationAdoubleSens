@@ -55,6 +55,7 @@ section {
     position: relative;
     h2 {
       font-size: 40px;
+      margin-bottom: 50px;
     }
   }
   .imBlueDabaDEEdabiDI {
@@ -81,7 +82,6 @@ section {
 
     .caroussel {
       width: 90vw;
-      height: 600px;
       margin: 0 auto;
       position: relative;
       .insideImg .show {
@@ -92,38 +92,35 @@ section {
         transition-duration: 1s;
         opacity: 0;
       }
-      .carousselTextContainer {
-        .carousselTextCard {
-          opacity: 1;
-          position: absolute;
-          left: 500px;
-          margin-right: 300px;
-          max-width: 90vw;
-        }
-        .noShow {
-          opacity: 0;
-          position: absolute;
-          left: 500px;
-          margin-right: 300px;
-        }
-      }
-      .carousselBtn {
+    }
+    .carousselTextContainer {
+      .carousselTextCard {
+        opacity: 1;
+        right: 200px;
+        top: 120px;
         position: absolute;
-        top: 270px;
-        right: 1vw;
-        width: 0px;
-        height: 0px;
-        border-top: 20px solid transparent;
-        border-left: 30px solid #000;
-        border-bottom: 20px solid transparent;
+        width: 40vw;
+        h3 {
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
       }
-      .carousselBtn:hover {
-        border-top: 25px solid transparent;
-        border-left: 40px solid #c2c3c7;
-        border-bottom: 25px solid transparent;
-        top: 265px;
-        transition: all 0.5s;
+      .noShow {
+        opacity: 0;
+        position: absolute;
       }
+    }
+    .carousselBtn {
+      position: absolute;
+      top: 150px;
+      height: 50px;
+      right: 1vw;
+      cursor: pointer;
+    }
+    .carousselBtn:hover {
+      top: 135px;
+      height: 70px;
+      transition: all 0.5s;
     }
   }
 }
