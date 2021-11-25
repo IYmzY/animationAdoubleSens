@@ -41,20 +41,34 @@ body {
 
 section {
   padding: 90px 90px;
+  display: flex;
+  flex-flow: column;
+
   h1 {
     font-size: 48px;
+    padding-bottom: 20px;
     span {
       color: #ff5740;
     }
   }
-  h2 {
-    font-size: 40px;
+  div {
+    position: relative;
+    h2 {
+      font-size: 40px;
+    }
+  }
+  .imBlueDabaDEEdabiDI {
+    top: 20px;
+    left: -4px;
+    position: absolute;
+    background-color: #103f8e;
+    width: 250px;
+    height: 20px;
+    z-index: -1;
   }
   .mainContainer {
     display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
+    flex-flow: row nowrap;
     .losangeContainer {
       position: relative;
       width: 323px;
@@ -78,42 +92,38 @@ section {
         transition-duration: 1s;
         opacity: 0;
       }
-    }
-    .carousselTextCardContainer {
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      align-items: center;
-      .carousselTextCard {
-        opacity: 1;
-        position: absolute;
-        left: 500px;
-        margin-right: 300px;
-        max-width: 90vw;
+      .carousselTextContainer {
+        .carousselTextCard {
+          opacity: 1;
+          position: absolute;
+          left: 500px;
+          margin-right: 300px;
+          max-width: 90vw;
+        }
+        .noShow {
+          opacity: 0;
+          position: absolute;
+          left: 500px;
+          margin-right: 300px;
+        }
       }
-      .noShow {
-        opacity: 0;
+      .carousselBtn {
         position: absolute;
-        left: 500px;
-        margin-right: 300px;
+        top: 270px;
+        right: 1vw;
+        width: 0px;
+        height: 0px;
+        border-top: 20px solid transparent;
+        border-left: 30px solid #000;
+        border-bottom: 20px solid transparent;
       }
-    }
-    .carousselBtn {
-      position: absolute;
-      top: 270px;
-      right: 1vw;
-      width: 0px;
-      height: 0px;
-      border-top: 20px solid transparent;
-      border-left: 30px solid #000;
-      border-bottom: 20px solid transparent;
-    }
-    .carousselBtn:hover {
-      border-top: 25px solid transparent;
-      border-left: 40px solid #c2c3c7;
-      border-bottom: 25px solid transparent;
-      top: 265px;
-      transition: all 0.5s;
+      .carousselBtn:hover {
+        border-top: 25px solid transparent;
+        border-left: 40px solid #c2c3c7;
+        border-bottom: 25px solid transparent;
+        top: 265px;
+        transition: all 0.5s;
+      }
     }
   }
 }
